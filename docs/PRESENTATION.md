@@ -238,7 +238,7 @@ docker-compose up --build
 6. Check stats update
 7. Show Swagger docs at `/docs`
 
-**Demo URL:** [Your hosted URL here]
+**Demo URL:** https://zaylegend.com/task-manager/
 
 ---
 

@@ -183,5 +183,7 @@ task-manager/
 
 ---
 
+**Live Demo:** https://zaylegend.com/task-manager/
+
 **Author:** Isayah Young-Burke
 **Built with:** FastAPI + React + TypeScript + Docker
