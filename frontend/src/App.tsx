@@ -13,7 +13,7 @@ const ProtectedRoute = ({ children }: { children: JSX.Element }) => {
 function App() {
   return (
     <AuthProvider>
-      <BrowserRouter>
+      <BrowserRouter basename="/task-manager">
         <Routes>
           <Route path="/login" element={<LoginPage />} />
           <Route

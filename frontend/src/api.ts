@@ -1,6 +1,8 @@
 import { Task, Stats, ActivityLog } from "./types";
 
-const API_BASE = process.env.REACT_APP_API_URL || "http://localhost:3001";
+// In production, API is proxied through nginx at /task-manager/api
+// In development, use localhost:3001 directly
+const API_BASE = process.env.REACT_APP_API_URL || "/task-manager/api";
 
 export const getToken = () => localStorage.getItem("token");
 
@@ -12,7 +14,7 @@ const authHeaders = () => ({
 const handleResponse = async (res: Response) => {
   if (res.status === 401) {
     localStorage.removeItem("token");
-    window.location.href = "/login";
+    window.location.href = "/task-manager/login";
     throw new Error("Unauthorized");
   }
   if (!res.ok) {
