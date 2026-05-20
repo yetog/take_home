@@ -14,7 +14,9 @@ const authHeaders = () => ({
 const handleResponse = async (res: Response) => {
   if (res.status === 401) {
     localStorage.removeItem("token");
-    window.location.href = "/task-manager/login";
+    // Use relative path to respect any base path configuration
+    const basePath = process.env.PUBLIC_URL || "";
+    window.location.href = `${basePath}/login`;
     throw new Error("Unauthorized");
   }
   if (!res.ok) {
