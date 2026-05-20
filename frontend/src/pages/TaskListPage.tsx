@@ -132,6 +132,9 @@ export default function TaskListPage() {
                 {task.title}
               </Link>
               <div className="task-actions">
+                <Link to={`/tasks/${task.id}`} className="btn btn-secondary">
+                  Edit
+                </Link>
                 <button
                   className="btn btn-danger"
                   onClick={() => handleDelete(task.id)}
